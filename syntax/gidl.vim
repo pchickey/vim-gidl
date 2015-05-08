@@ -19,6 +19,8 @@ syn keyword   gidlForm     def-interface
 syn keyword   gidlPrim     uint8_t uint16_t uint32_t uint64_t
 syn keyword   gidlPrim     sint8_t sint16_t sint32_t sint64_t
 syn keyword   gidlPrim     bool_t float_t double_t
+syn keyword   gidlIfPrim   stream attr
+syn keyword   gidlPerm     read write readwrite r w rw
 
 syn region  gidlCommentLine   start="--" end="$"   contains=@Spell
 syn region  gidlStruc         matchgroup=Delimiter start="(" matchgroup=Delimiter end=")" contains=ALL
@@ -32,5 +34,7 @@ hi def link gidlForm          Conditional
 hi def link gidlIdentifier    Type
 hi def link gidlNumber        Number
 hi def link gidlPrim          Special
+hi def link gidlIfPrim        Statement
+hi def link gidlPerm          Special
 
 let b:current_syntax = "gidl"
